@@ -1,0 +1,221 @@
+seifsalah@pop-os: $ sudo useradd -m osc 
+seifsalah@pop-os: $ sudo groupadd osc_group seifsalahapop-os:-$ sudo passwd osc
+New password:
+Retype new password:
+passwd: password updated successfully 
+seifsalah@pop-os: $ sudo usermo& -aG osc group osc 
+seifsalah@pop-os: $ sudo cat /etc/passwd 
+root:x:0:0: root: /root: /bin/bash
+daemon: × :1:1: daemon: /usr/sin:/usr/sbin/nologin 
+bin:x:2:2:bin:/bin:/usr/sin/nologin 
+sys:x:3:3:sys: /dev: /usr/sbin/nologin
+sync:x: 4:65534 : sync: /bin:/bin/sync
+games:x:5:60: games: /usr/games: /usr/sbin/nologin 
+man: x: 6:12 :man: /var/cache/man: /usr/sin/nologin 
+1p:x:7:7:1p:/var/spool/lpd:/usr/sbin/nologin 
+mail:x: 8:8:mail: /var/mail:/usr/sin/nologin
+news:x:9:9: news: /var/spool/news : /usr/sin/nologin 
+uucp: x: 10:10: uucp: /var/spool/uucp: /us/sbin/nologin 
+proxy: x: 13:13 :proxy: /bin: /usr/sin/nologin 
+www-data: x: 33:33 :www-data: /var/www:/us/sbin/nologin 
+backup:x: 34:34:backup: /var/backups: /us/sbin/nologin 
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologi 
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+vuidd:x: 126:134 ::/run/uuidd:/usr /sbin/nologin
+seifsalah:x: 1000:1000 :seif salah:/home/seifsalah:/bin/bash 
+osc: x: 1001:1001 ::/home/osc: /bin/sh 
+seifsalah@pop-os:~$ groups osC
+OSC : OSC osC group
+seifsalah@pop-os:~$ sudo usermod - aG sudo osc 
+seifsalahapop-os:~$ groups osC
+OSC : osc sudo osc group 
+seifsalah@pop-os:~$ su - OSC
+Password:
+$ bash
+To run a command as administrator (user "root"), use "sudo <command>"
+See "man sudo root" for details
+oscapop-os:~$ cd /home/
+oscapop-os: /home$ sudo mkdir permission_practice
+osc@pop-os: /home$ cd permission practice/
+osc@pop-os:/home/permission_practice$ sudo touch public_file.txt 
+osc@pop-os:/home/permission_practice$ sudo chmod 555 public_file.txt 
+oscapop-os:/home/permission_practice$ sudo touch private file.txt 
+oscapop-0s: /home/permission_practices sudo chmod 666 public_file.txt 
+osc@pop-os: /home/permission_practice$ sudo chmod 644 private_file.txt 
+osc@pop-os: /home/permission_practice$ sudo touch excutable_script.sh
+osc@pop-os: /home/permission practice$ sudo chmod 750 excutable script.sh 
+osc@pop-os: /home/permission_practice$ sudo chmod 600 private_file.txt 
+osc@pop-os:/home/permission_practice$ chown seifsalah private_file.txt
+chown: changing ownership of 'private_file. txt': operation not permitted 
+oscapop-os:/home/permission_practice$ sudo chown seifsalah private_file.txt 
+oscapop-os:/home/permission_practice$ sudo chrp osc_group private_file. txt 
+oscapop-os:/home/permission_practice$ ls -li 
+total o
+15080721 -rwxr -x-.1 root root 0 Aug 21 17:18 excutable_script.sh
+15080720 -rw-----. 1 seifsalah osc_group 0 Aug 21 17:16 private_file.txt
+15080719 -rw-rw-rw- 1 root root 0 Aug 21 17:15 public_ file. txt
+oscapop-os:/home/permission_practice$ sleep 10008
+[31 5057
+oscapop-os:/home/permission_practice$ ps -f
+JID
+OSC
+OSC
+OSC
+OSC
+PID
+5035
+5041
+5057
+5058
+PPID
+C STIME TTY
+5034
+0 17:32 pts/0
+5035
+0 17:32 pts/0
+5041
+0 17:36 pts/0
+5041 0 17:36 pts/0
+[ 21 - Done
+sleep 100
+oscapop-os:/home/permission_practice$ kill 5057 
+osc@pop-os:/home/permission_practice$ ps -f
+UID
+PID
+PPID C STIME TTY
+oSC
+5035
+5034 0 17:32 pts/0
+OSC
+5041
+5035 0 17:32 pts/0
+osC
+5059
+5041 0 17:36 pts/0
+[3]+
+Terminated
+sleep 1000
+TIME CMD
+00:00:00 - sh
+00:00:00 bash
+00:00:00 sleep 1000
+00:00:00 ps - f
+TIME CMD
+00:00:00 - sh
+00:00:00 bash
+00:00:00 ps - f
+total o
+-rwxr -X- - -- 1 root root 0 Aug 21 18:20 executable script.sh
+-rW- - - .1 seifsalah 1002 0 Aug 21 18:20 private file.txt
+-rw-rw-rw- 1 root root 0 Aug 21 18:19 public_file.txt
+osc@pop-os: /home/permission_practice$ vim
+[1]+
+Stopped
+vim
+osc@pop-os:/home/permission_practice$ killall vim osc@pop-os: /home/permission_practice$ jobs
+[1]+
+Stopped
+vim
+oscapop-os: /home/permission_practice$ ps
+PID TTY
+TIME CMD
+4393 pts/1
+00:00:00 sh
+4399 pts/1
+00:00:00 bash
+4409 pts/1
+00:00:00 vim
+4413 pts/1
+00:00:00 ps 
+osc@pop-os:/home/permission_practice$ ps -1
+F S
+UID
+PID
+PPID C PRI NI ADDR SZ WCHAN TTY
+4 S 1001
+4393
+4392
+0
+86
+6 -
+0 S
+1001
+4399
+4393
+0
+722 do_wai pts/1
+86
+6
+0 Т 1001
+4409
+4399
+86
+6 -
+5009 do_wai pts/1
+0 R 1001
+4414
+4399 0 86
+8315 do_sig pts/1
+6 -
+5626
+pts/1
+oscapop-os:/home/permission practice$ man ps 
+osc@pop-os:/home/permission_ practice$
+TIME CMD
+00:00:00 sh
+00:00:00 bash
+00:00:00 vim
+00:00:00 ps
+oscapop-os:/home/permission_practice$ sudo apt install neofetch
+[sudo] password for osc:
+Reading package lists. .. Done
+Building dependency tree. .. Done
+Reading state information... Done
+The following additional packages will be installed:
+caca-utils chafa gsfonts imagemagick imagemagick-6-common imagemagick-6.q16
+jp2a libchafa0 libde265-0 libfftw3-double3 libgc1 libheif1 libid3tago
+libilmbase25 libimlib2 libjr-tools libjro liblqr-1-0 libmagickcore-6.g16-6
+libmagickcore-6.q16-6-extra libmagickwand-6.16-6 libnetpbm10 libopenexr25
+libsixel-bin libsixel1 libwmflite-0.2-7 netpbm toilet toilet-fonts w3m
+w3m-img
+Suggested packages:
+imagemagick-doc autotrace enscript ffmpeg gimp gnuplot grads graphviz hp2xx
+html2ps libwmf-bin mplayer povray radiance texlive-base-bin transfig
+ufraw-batch libfftw3-bin libfftw3-dev inkscape filet cmigemo dict dict-wn
+dictd mime-support w3m-el xsel
+The following NEW packages will be installed:
+caca-utils chafa gsfonts imagemagick imagemagick-6-common imagemagick-6.q16
+jp2a libchafa0 libde265-0 libfftw3-double3 libgc1 libheif1 libid3tago
+libilmbase25 libimlib2 libjr-tools libjxro liblgr-1-0 libmagickcore-6.g16-6
+libmagickcore-6.q16-6-extra libmagickwand-6.16-6 libnetpbm10 libopenexr25
+libsixel-bin libsixel1 libwmflite-0.2-7 neofetch netpbm toilet toilet-fonts
+update-alternatives: using /usr/bin/stream-1m.q16 to provide /usr/bin/stream-1m
+6 (stream-im6) in auto mode update-alternatives: using /us/bin/display-im6.q16 to provide /us/bin/display (display) in auto mode
+update-alternatives: using /us/bin/display-im6.q16 to provide /us/bin/display-im6 (display-imb) in auto mode update-alternatives: using /us/bin/montage-im6.q16 to provide /us/bin/montage (montage) in auto mode
+update-alternatives: using /us/bin/montage-im6.q16 to provide /us/bin/montage-im6 (montage-im6) in auto mode update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /us/bin/mogrify (mogrify) in auto mode
+update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /us/bin/mogrify-im6 (mogrify-im6) in auto mode
+Setting up imagemagick (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.3)
+Processing triggers for desktop-file-utils (0.26-1ubuntu3)
+Processing triggers for hicolor-icon-theme (0.17-2)
+Processing
+Processing triggers for gnome-menus (3.36.0-1ubuntu3)
+Processing triggers for libc-bin (2.35-Oubuntu3. 1)
+Processing triggers for man-db (2.10.2-1) .
+Processing triggers for fontconfig (2.13.1-4. 2ubuntu5)
+osc@pop-os:/home/permission_practice$ sudo apt-get remove neofetch
+Reading package lists... Done Building dependency tree.
+Done
+Reading state information.
+Done
+The following packages were automatically installed and are no longer required:
+caca-utils chafa jp2a libchafa0 toilet toilet-fonts
+Use "sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+neofetch
+o upgraded, 0 newly installed, 1 to remove and 186 not upgraded.
+After this operation, 359 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 213472 files and directories currently installed.)
+Removing neofetch (7.1.0-3) ..
+Processing triggers for man-db (2.10.2-1) ... 
+osc@pop-os:/home/permission_practice$
